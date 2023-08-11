@@ -1,0 +1,171 @@
+#section01 {
+    height: 100%;
+    background: #568483;
+    position: relative;
+    z-index: 100;
+}
+
+
+#sc03_bg .left_bg{
+    width: 636px;
+    height: 1082px;
+    background: url("https://www.designnas.com/portfolio/bx-site/pandora/sub/css/../imgs/sub02/sc03/left_bg.png") no-repeat center;
+    position: absolute;
+    left: 0;
+    top: 74px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 2s;
+}
+
+#sc03_bg .left_bg.on{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+#sc03_bg .right_bg{
+    width: 914px;
+    height: 1167px;
+    position: absolute;
+    right: 0;
+    top: -254px;
+    overflow: hidden;
+}
+
+#sc03_bg .right_bg img{
+    opacity: 0;
+    transition: opacity 1s, transform 2s;
+    transform: translateX(100%);
+}
+
+#sc03_bg .right_bg.on img{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+#sc03_title{
+    width: 938px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 318px;
+    transform: translateX(-50%);
+    /*background: darkseagreen;*/
+}
+
+#sc03_title > div:nth-child(1){
+    margin-bottom: 9px;
+}
+
+#sc03_title > div:nth-child(2){
+    margin-bottom: 71px;
+}
+
+
+#sc03_title .sc03_bt{
+    width: 266px;
+    height: 70px;
+    background: #811218;
+    position: absolute;
+    left: 50%;
+    bottom: -157px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sc03_title .sc03_bt:hover{
+    background: #9a070f;
+}
+
+
+#section01 .right_object{
+    width: 414px;
+    height: 847px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: -241px;
+    /*background: #000;*/
+}
+
+
+#section01 .sc03_right_pendant{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+#section01 .sc03_right_pendant img{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s, transform 2s;
+}
+
+#section01 .sc03_right_pendant.on img{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#section01 .sc03_right_bg_front{
+    position: absolute;
+    right: 0;
+    top: 165px;
+    overflow: hidden;
+}
+
+
+#section01 .sc03_right_bg_front img{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s, transform 1.8s;
+}
+
+#section01 .sc03_right_bg_front.on img{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+#section01 .sc03_left_pendant{
+    position: absolute;
+    left: 143px;
+    top: 317px;
+    opacity: 0;
+    transition: all 1.1s 0.7s;
+}
+
+#section01 .sc03_left_pendant.on{
+    opacity: 1;
+}
+
+#section01 .sc03_hedgehog{
+    position: absolute;
+    left: 215px;
+    top: 478px;
+    opacity: 0;
+    transition: all 1.1s 1s;
+}
+
+#section01 .sc03_hedgehog.on{
+    opacity: 1;
+}
+
+#section01 .sc03_bracelet{
+    position: absolute;
+    left: 248px;
+    bottom: -15px;
+    opacity: 0;
+    transition: all 1.2s 1.3s;
+}
+
+#section01 .sc03_bracelet.on{
+    opacity: 1;
+}
