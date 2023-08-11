@@ -187,7 +187,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
     function intro() {
 
         $('#logo').delay(1000).queueAddClass('opacity').delay(1600).queueAddClass('on');
-        $('#main_title .muse').delay(4900).queueAddClass('on');
+        //$('#main_title .muse').delay(4900).queueAddClass('on');
         $('#scroll > div').addClass('on');
         $('#sns').addClass('on');
         $('#section01 .inner .last').addClass('on');
@@ -200,7 +200,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
     intro();
 
-
+    /*
     $(".sub_inner").slick({
         dots: true, //네비게이션 사용여부
         arrows: false, //화살표 사용여부
@@ -227,7 +227,8 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         variableWidth: false,
 
     });
-
+    */
+   
     $("#slider").slick({
         dots: true, //네비게이션 사용여부
         arrows: false, //화살표 사용여부
@@ -237,7 +238,6 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         fade: false, //fade 모드 사용여부 슬라이드 1개일때만 가능
         speed: 900, // 슬라이드 속도
         infinite: true, // 무한슬라이
-        asNavFor: '.sub_inner', //다른 슬라이드 연동 여부
         centerMode: false, //센터모드
         centerPadding: '0%', //센터 모드 시 여백
         slidesToShow: 3, //보여질 슬라이드 갯수
@@ -263,31 +263,31 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
         if (currentSlide === 0) {
             $('#slider').attr('data-name', 'slider01');
-            $('#main_title').attr('data-name', 'slider01');
+            //$('#main_title').attr('data-name', 'slider01');
             $('#nav > li:nth-child(1)').addClass('on');
 
         } else if (currentSlide === 1) {
             // $('#main_title .faerie').addClass('on');
             $('#slider').attr('data-name', 'slider02');
-            $('#main_title').attr('data-name', 'slider02');
+            //$('#main_title').attr('data-name', 'slider02');
             $('#nav > li:nth-child(2)').addClass('on');
 
         } else if (currentSlide === 2) {
             // $('#main_title .gardener').addClass('on');
             $('#slider').attr('data-name', 'slider03');
-            $('#main_title').attr('data-name', 'slider03');
+            //$('#main_title').attr('data-name', 'slider03');
             $('#nav > li:nth-child(3)').addClass('on');
 
         } else if (currentSlide === 3) {
             // $('#main_title .oracle').addClass('on');
             $('#slider').attr('data-name', 'slider04');
-            $('#main_title').attr('data-name', 'slider04');
+           //$('#main_title').attr('data-name', 'slider04');
             $('#nav > li:nth-child(4)').addClass('on');
 
         } else if (currentSlide === 4) {
             // $('#main_title .queen').addClass('on');
             $('#slider').attr('data-name', 'slider05');
-            $('#main_title').attr('data-name', 'slider05');
+            //$('#main_title').attr('data-name', 'slider05');
             $('#nav > li:nth-child(5)').addClass('on');
         }
 
@@ -321,8 +321,8 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         if (fixScreen === true) { // 초기화
 
             $('#slider').removeClass('full');
-            $('#sub_title').css('transition', 'opacity 0.5s cubic-bezier(1, -0.10, 0.25, 1) 0.7s').addClass('on');
-            $('#main_title > div').removeClass('on');
+            //$('#sub_title').css('transition', 'opacity 0.5s cubic-bezier(1, -0.10, 0.25, 1) 0.7s').addClass('on');
+            //$('#main_title > div').removeClass('on');
             $('#section01 .inner .last').css('transition', 'all 0.8s').removeClass('on');
             $('#scroll > div').css('transition', 'all 0.8s').removeClass('on');
             $('#scroll_2').addClass('on');
@@ -350,8 +350,8 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         if (fixScreen === true) { // 초기화
 
             $('#slider').removeClass('full');
-            $('#sub_title').css('transition', 'opacity 0.5s cubic-bezier(1, -0.10, 0.25, 1) 0.7s').addClass('on');
-            $('#main_title > div').removeClass('on');
+            //$('#sub_title').css('transition', 'opacity 0.5s cubic-bezier(1, -0.10, 0.25, 1) 0.7s').addClass('on');
+            //$('#main_title > div').removeClass('on');
             $('#section01 .inner .last').css('transition', 'all 0.8s').removeClass('on');
             $('#scroll > div').css('transition', 'all 0.8s').removeClass('on');
             $('#scroll_2').addClass('on');
@@ -380,7 +380,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
         fixScreen = true;
         $(this).addClass('full');
-        $('#sub_title').css('transition', 'opacity 0.5s 0.5s,transform 1s linear').removeClass('on');
+        //$('#sub_title').css('transition', 'opacity 0.5s 0.5s,transform 1s linear').removeClass('on');
         $('#section01 .inner .last').css('transition', 'all 0.8s 2s').addClass('on');
         $('#scroll > div').css('transition', 'all 0.8s 2.4s').addClass('on');
         $('#scroll_2').removeClass('on');
@@ -392,29 +392,29 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         if ($(this).attr('data-name') === 'slider01' && delayTime === false) {
 
 
-            $('#main_title .muse').delay(1000).queueAddClass('on');
+            //$('#main_title .muse').delay(1000).queueAddClass('on');
             delayTime = true;
             //console.log(delayTime);
 
 
         } else if ($(this).attr('data-name') === 'slider02' && delayTime === false) {
 
-            $('#main_title .faerie').delay(1000).queueAddClass('on');
+           //$('#main_title .faerie').delay(1000).queueAddClass('on');
             delayTime = true;
 
 
         } else if ($(this).attr('data-name') === 'slider03' && delayTime === false) {
-            $('#main_title .gardener').delay(1000).queueAddClass('on');
+            //$('#main_title .gardener').delay(1000).queueAddClass('on');
             delayTime = true;
 
 
         } else if ($(this).attr('data-name') === 'slider04' && delayTime === false) {
-            $('#main_title .oracle').delay(1000).queueAddClass('on');
+           // $('#main_title .oracle').delay(1000).queueAddClass('on');
             delayTime = true;
 
 
         } else if ($(this).attr('data-name') === 'slider05' && delayTime === false) {
-            $('#main_title .queen').delay(1000).queueAddClass('on');
+            //$('#main_title .queen').delay(1000).queueAddClass('on');
             delayTime = true;
 
         }

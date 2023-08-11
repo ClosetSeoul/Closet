@@ -1,5 +1,7 @@
 /*# sourceURL=css/plugin/slick.css */
 /*@ sourceURL=css/plugin/slick.css */
+/*# sourceURL=css/plugin/slick.css */
+/*@ sourceURL=css/plugin/slick.css */
 /* Slider */
 .slick-slider
 {
@@ -89,6 +91,8 @@
 .slick-slide img
 {
     display: block;
+    height: 900px;
+    width: 100%;
 }
 .slick-slide.slick-loading img
 {
