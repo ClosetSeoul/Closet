@@ -1,10 +1,10 @@
-/*# sourceURL=css/main.css */
-/*@ sourceURL=css/main.css */
-/*@ sourceURL=css/main.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 body{
     cursor: none;
+    font-family: 'Gothic A1', sans-serif;
 }
 
 .menu{
@@ -651,5 +651,11 @@ body{
     }
     100%{
         transform: translate(0,4px);
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    #main_title > div.on{
+        opacity: 0;
     }
 }

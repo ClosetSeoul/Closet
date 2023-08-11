@@ -204,7 +204,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
     $(".sub_inner").slick({
         dots: true, //네비게이션 사용여부
         arrows: false, //화살표 사용여부
-        autoplay: true, //자동넘김
+        autoplay: false, //자동넘김
         autoplaySpeed: 3000, //자동넘김 속도
         pauseOnHover: false, //마우스 오버시 자동재생 멈춤
         fade: false, //fade 모드 사용여부 슬라이드 1개일때만 가능
@@ -231,7 +231,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
     $("#slider").slick({
         dots: true, //네비게이션 사용여부
         arrows: false, //화살표 사용여부
-        autoplay: true, //자동넘김
+        autoplay: false, //자동넘김
         autoplaySpeed: 3000, //자동넘김 속도
         pauseOnHover: false, //마우스 오버시 자동재생 멈춤
         fade: false, //fade 모드 사용여부 슬라이드 1개일때만 가능
