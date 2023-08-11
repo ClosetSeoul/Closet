@@ -4,7 +4,8 @@
  */
 function Logic () {
 
-    console.log("%c by.",'background:black; color:white;');
+    //console.log("%c by.",'background:black; color:white;');
+    /*
     console.log(
         "     _\n" +
         " ___(_)_     _\n" +
@@ -15,7 +16,7 @@ function Logic () {
         "Version : 1.5.0\n" +
         "Author  : SeonBeom Sim\n" +
         "Website : https://github.com/simseonbeom");
-
+    */
 
     //console.log("%c - KindTiger - ",'background:black; color:white;');
 

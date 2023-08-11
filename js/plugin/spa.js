@@ -24,7 +24,7 @@ function storyFunc(){
 
     $('.horizontal').each(function (i, el) {
 
-        console.log(el)
+        //console.log(el)
 
         let thisSection = $(this);
         let thisPinWrap = thisSection.find('.pin-wrap');
@@ -65,18 +65,18 @@ function storyFunc(){
             onUpdate: self => {
                 if (self.isActive) {
                     thisAnimWrap.css({"top": scrollPositionY + "px"});
-                    console.log('update');
+                    //console.log('update');
                     thisPinWrap.css('overflow', 'initial');
 
                 }
             },
             onLeave: ({progress, direction, isActive}) => {
                 thisAnimWrap.css({"top": `${totalH}px`});
-                console.log('onLeave');
+                //console.log('onLeave');
             },
             onLeaveBack: ({progress, direction, isActive}) => {
                 thisAnimWrap.css({"top": ""});
-                console.log('onLeaveBack');
+                //console.log('onLeaveBack');
             }
         });
 
@@ -99,7 +99,7 @@ function cursor_event() {
 
     $('#section01 .container02 .items05').mouseenter(function () {
 
-        console.log('enterrrrrr');
+        //console.log('enterrrrrr');
         $('#flag').addClass('on2');
         $('.ch-img img').attr('src','intro/over_button/click.png');
     }).mouseleave(function () {
@@ -189,7 +189,7 @@ const pageFunc = {
         container.addListener((e) => {
 
             let scrollTop = container.scrollTop;
-            console.log(scrollTop);
+            //console.log(scrollTop);
 
 
             $('#section02 .circle_fix').css('transform', `translateY(${scrollTop}px)`);
@@ -242,7 +242,7 @@ const pageFunc = {
 
     },
     about: () => {
-        console.log('about 도착!');
+        //console.log('about 도착!');
 
 
         const aboutVideo = document.querySelector('#about_video');
@@ -294,7 +294,7 @@ const pageFunc = {
             container.addListener((e) => {
 
                 let scrollTop = container.scrollTop;
-                console.log(scrollTop);
+                //console.log(scrollTop);
 
                 if (scrollTop >= 1) {
                     $('#section03').addClass('on');
@@ -441,7 +441,7 @@ const pageFunc = {
 
     },
     love: () => {
-        console.log('love 도착!');
+        //console.log('love 도착!');
 
         (function () {
 
@@ -476,7 +476,7 @@ const pageFunc = {
             container.addListener((e) => {
 
                 let scrollTop = container.scrollTop;
-                console.log(scrollTop);
+                //console.log(scrollTop);
 
 
                 $('#fix_section').css('transform', `translateY(${scrollTop}px)`);
@@ -514,7 +514,7 @@ const pageFunc = {
 
         let value = 0;
 
-        console.log('category 도착!');
+        //console.log('category 도착!');
 
         const category = $('#category');
         const leftElem = $('.long_text .inner');
@@ -526,13 +526,13 @@ const pageFunc = {
 
         category.on('wheel', function (e) {
 
-            console.log();
+            //console.log();
 
             let v = e.originalEvent.deltaY;
 
             leftTop = leftElem[0].getBoundingClientRect().top;
             rightTop = rightElem[0].getBoundingClientRect().top;
-            console.log(rightTop);
+            //console.log(rightTop);
 
             /*        if(leftTop < -3000){
                         console.log('down');
@@ -642,7 +642,7 @@ const pageFunc = {
 
                             // console.log('upupppp')
 
-                            console.log('upupppp')
+                            //console.log('upupppp')
                             TweenMax.set('#right_box .text_container .inner', {
                                 y: -5500,
                             })
@@ -673,10 +673,10 @@ const pageFunc = {
 
     },
     menu: () => {
-        console.log('menu 도착!')
+        //console.log('menu 도착!')
     },
     story: () => {
-        console.log('story 도착!')
+        //console.log('story 도착!')
 
             // window.location.reload();
 
@@ -702,7 +702,7 @@ const pageFunc = {
             scrollPositionX = offset.x;
             scrollPositionY = offset.y;
 
-            console.log(scrollPositionY);
+           // console.log(scrollPositionY);
 
             if (scrollPositionY >= 900) {
 
@@ -745,7 +745,7 @@ const pageFunc = {
         // tt.getAll().forEach(t => t.kill());
 
 
-        console.log('eeeee');
+        //console.log('eeeee');
 
 
     }
@@ -760,7 +760,7 @@ const pagesInfo = {
         },
         removeAnimation: function () {
 
-            console.log('bye');
+            //console.log('bye');
         }
     },
     about: {
@@ -925,7 +925,7 @@ function startAnimation() {
 
 function enterPageTransition(pageData) {
     clicker = true;
-    console.log(clicker);
+    //console.log(clicker);
     const currentPage = pageData.current;
     const nextPage = pageData.next;
 

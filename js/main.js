@@ -36,7 +36,10 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         autohidemode: true,
         boxzoom: false,
         smoothscroll: true,
-        zindex: 9999
+        zindex: 9999,
+        enabletranslate3d: true, // nicescroll can use css translate to scroll content
+        enablemousewheel: true, // nicescroll can manage mouse wheel events
+        enablekeyboard: true
     });
 
     // =========================
@@ -66,7 +69,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
 
 
-        console.log('open clicked');
+        //console.log('open clicked');
             if(clicker === true){
 
 
@@ -86,7 +89,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
             }
 
-            console.log(clicker);
+            //console.log(clicker);
 
 
     })
@@ -201,7 +204,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
     $(".sub_inner").slick({
         dots: true, //네비게이션 사용여부
         arrows: false, //화살표 사용여부
-        autoplay: false, //자동넘김
+        autoplay: true, //자동넘김
         autoplaySpeed: 3000, //자동넘김 속도
         pauseOnHover: false, //마우스 오버시 자동재생 멈춤
         fade: false, //fade 모드 사용여부 슬라이드 1개일때만 가능
@@ -212,11 +215,13 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         centerPadding: '0%', //센터 모드 시 여백
         slidesToShow: 1, //보여질 슬라이드 갯수
         slidesToScroll: 1, //넘겨질 슬라이드 갯수
-        swipe: false, //스와이프
-        focusOnSelect: false, //슬라이드 선택시 넘어
+        swipe: true, //스와이프
+        focusOnSelect: true, //슬라이드 선택시 넘어
         draggable: true,
         vertical: true, //세로 슬라이드
-        verticalSwiping: false, //세로 스와이프
+        verticalSwiping: true, //세로 스와이프
+        mobileFirst : true,
+        touchMove : true,
         initialSlide: 0,//슬라이드 시작순서
         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)', //css transition
         variableWidth: false,
@@ -226,7 +231,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
     $("#slider").slick({
         dots: true, //네비게이션 사용여부
         arrows: false, //화살표 사용여부
-        autoplay: false, //자동넘김
+        autoplay: true, //자동넘김
         autoplaySpeed: 3000, //자동넘김 속도
         pauseOnHover: false, //마우스 오버시 자동재생 멈춤
         fade: false, //fade 모드 사용여부 슬라이드 1개일때만 가능
@@ -237,11 +242,13 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
         centerPadding: '0%', //센터 모드 시 여백
         slidesToShow: 3, //보여질 슬라이드 갯수
         slidesToScroll: 1, //넘겨질 슬라이드 갯수
-        swipe: false, //스와이프
-        focusOnSelect: false, //슬라이드 선택시 넘어
+        swipe: true, //스와이프
+        focusOnSelect: true, //슬라이드 선택시 넘어
         draggable: true,
         vertical: true, //세로 슬라이드
-        verticalSwiping: false, //세로 스와이프
+        verticalSwiping: true, //세로 스와이프
+        mobileFirst : true,
+        touchMove : true,
         initialSlide: 0,//슬라이드 시작순서
         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)', //css transition
         variableWidth: false,
@@ -297,7 +304,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
 
     wheelStage.addEventListener('wheel', function (e) {
-        console.log(delayTime);
+        //console.log(delayTime);
 
         let value = e.deltaY;
 
@@ -332,7 +339,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
 
     $('#main_title').on('wheel',function (e) {
-        console.log();
+        //console.log();
 
         if(e.originalEvent.deltaY > 0){ //up
 
@@ -355,7 +362,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
             }, 1000);
             delayTime = false;
             delayLocation = true;
-            console.log(delayTime);
+            //console.log(delayTime);
         }
     })
 
@@ -364,8 +371,8 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
     $('#slider').click(function () {
 
-        console.log();
-        console.log(delayTime);
+        //console.log();
+        //console.log(delayTime);
 
         setTimeout(()=>{
             delayLocation = false;
@@ -387,7 +394,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
             $('#main_title .muse').delay(1000).queueAddClass('on');
             delayTime = true;
-            console.log(delayTime);
+            //console.log(delayTime);
 
 
         } else if ($(this).attr('data-name') === 'slider02' && delayTime === false) {
@@ -415,45 +422,42 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
 
         if($(this).hasClass('full') && delayLocation === false && $(this).attr('data-name') === 'slider01'){
 
-            location.href = 'sub/sub01.html';
+            //location.href = 'sub/sub01.html';
             // delayLocation = true;
         }
 
 
         if($(this).hasClass('full') && delayLocation === false && $(this).attr('data-name') === 'slider02'){
 
-            location.href = 'sub/sub01.html';
+            //location.href = 'sub/sub01.html';
             // delayLocation = true;
         }
 
         if($(this).hasClass('full') && delayLocation === false && $(this).attr('data-name') === 'slider03'){
 
-            location.href = 'sub/sub02.html';
+            //location.href = 'sub/sub02.html';
         }
 
         if($(this).hasClass('full') && delayLocation === false && $(this).attr('data-name') === 'slider04'){
 
-            location.href = 'sub/sub03.html';
+            //location.href = 'sub/sub03.html';
         }
 
 
     });
 
     $('#main_title').click(function () {
-
-
-
         if($(this).attr('data-name') === 'slider01'){
-            location.href = 'sub/sub01.html';
+            //location.href = 'sub/sub01.html';
 
         }else if($(this).attr('data-name') === 'slider02'){
-            location.href = 'sub/sub01.html';
+            //location.href = 'sub/sub01.html';
 
         }else if($(this).attr('data-name') === 'slider03'){
-            location.href = 'sub/sub02.html';
+            //location.href = 'sub/sub02.html';
 
         }else if($(this).attr('data-name') === 'slider04'){
-            location.href = 'sub/sub03.html';
+            //location.href = 'sub/sub03.html';
         }
 
     });
@@ -462,7 +466,7 @@ $(document).ready(function () {//HTML 과 CSS 의 모든 로딩이 끝나면 J-Q
     $('#nav > li').click(function () {
         $('#nav > li').removeClass('on');
         $(this).addClass('on');
-        console.log(delayTime);
+        //console.log(delayTime);
         delayTime = true;
 
         $('#main_title > div').removeClass('on');
